@@ -1,5 +1,15 @@
-package com.example.kotlinpesolutions.solver
+/*
+ * kotlin-pe-solutions
+ * Copyright (c) 2021 shunsuke.tsumori
+ *
+ * Released under the MIT license.
+ * see https://opensource.org/licenses/MIT
+ */
 
+
+package com.example.kotlinpesolutions.solver.q1_100
+
+import com.example.kotlinpesolutions.solver.PeSolver
 import org.springframework.core.io.ClassPathResource
 import org.springframework.stereotype.Component
 import java.io.BufferedReader
