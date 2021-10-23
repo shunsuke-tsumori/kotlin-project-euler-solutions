@@ -8,10 +8,10 @@ import org.springframework.stereotype.Component
 
 @Component
 class TheTasklet(
-    private val helloComponent: HelloComponent
+    private val solverDispatcher: SolverDispatcher
 ) : Tasklet {
     override fun execute(contribution: StepContribution, chunkContext: ChunkContext): RepeatStatus? {
-        helloComponent.solve()
+        solverDispatcher.run()
         return RepeatStatus.FINISHED
     }
 }
