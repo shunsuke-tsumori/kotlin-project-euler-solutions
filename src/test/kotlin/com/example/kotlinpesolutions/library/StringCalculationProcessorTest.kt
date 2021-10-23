@@ -12,6 +12,7 @@ package com.example.kotlinpesolutions.library
 import org.junit.jupiter.api.Test
 
 import org.junit.jupiter.api.Assertions.*
+import org.junit.jupiter.api.DisplayName
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.boot.test.context.SpringBootTest
 
@@ -21,27 +22,32 @@ internal class StringCalculationProcessorTest(
 ) {
 
     @Test
-    fun test_isPalindrome1() {
+    @DisplayName("isPalindrome('101')")
+    fun test_isPalindrome_t1() {
         assertTrue(stringCalculationProcessor.isPalindrome("101"))
     }
 
     @Test
-    fun test_isPalindrome2() {
+    @DisplayName("isPalindrome('1001')")
+    fun test_isPalindrome_t2() {
         assertTrue(stringCalculationProcessor.isPalindrome("1001"))
     }
 
     @Test
-    fun test_isPalindrome3() {
+    @DisplayName("isPalindrome('201')")
+    fun test_isPalindrome_f1() {
         assertFalse(stringCalculationProcessor.isPalindrome("201"))
     }
 
     @Test
-    fun test_isPalindrome4() {
+    @DisplayName("isPalindrome('2001')")
+    fun test_isPalindrome_f2() {
         assertFalse(stringCalculationProcessor.isPalindrome("2001"))
     }
 
     @Test
-    fun test_isPalindrome5() {
+    @DisplayName("isPalindrome('1021')")
+    fun test_isPalindrome_f3() {
         assertFalse(stringCalculationProcessor.isPalindrome("1021"))
     }
 }
