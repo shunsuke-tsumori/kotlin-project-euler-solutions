@@ -36,7 +36,7 @@ out/
 ### VS Code ###
 .vscode/
 
-src/main/kotlin/com/example/kotlinpesolutions/solver/q101_200/
-src/main/kotlin/com/example/kotlinpesolutions/solver/q201_300/
-src/main/kotlin/com/example/kotlinpesolutions/solver/q301_400/
-src/main/kotlin/com/example/kotlinpesolutions/solver/q401_500/
+src/main/kotlin/com/example/kotlinpesolutions/solver/p101_200/
+src/main/kotlin/com/example/kotlinpesolutions/solver/p201_300/
+src/main/kotlin/com/example/kotlinpesolutions/solver/p301_400/
+src/main/kotlin/com/example/kotlinpesolutions/solver/p401_500/

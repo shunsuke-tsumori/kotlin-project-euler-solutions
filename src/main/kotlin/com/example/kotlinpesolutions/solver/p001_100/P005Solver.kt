@@ -7,14 +7,14 @@
  */
 
 
-package com.example.kotlinpesolutions.solver.q1_100
+package com.example.kotlinpesolutions.solver.p001_100
 
 import com.example.kotlinpesolutions.library.NumericalCalculator
 import com.example.kotlinpesolutions.solver.PeSolver
 import org.springframework.stereotype.Component
 
 @Component
-class Q5Solver(
+class P005Solver(
     private val numericalCalculator: NumericalCalculator
 ) : PeSolver {
     override fun run() {

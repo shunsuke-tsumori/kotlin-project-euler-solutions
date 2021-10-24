@@ -7,7 +7,7 @@
  */
 
 
-package com.example.kotlinpesolutions.solver.q1_100
+package com.example.kotlinpesolutions.solver.p001_100
 
 import com.example.kotlinpesolutions.solver.PeSolver
 import org.springframework.core.io.ClassPathResource
@@ -16,7 +16,7 @@ import java.io.BufferedReader
 import java.io.InputStreamReader
 
 @Component
-class Q1Solver : PeSolver {
+class P001Solver : PeSolver {
     override fun run() {
         val resourceStream = ClassPathResource("params/q1.txt").inputStream
         val reader = BufferedReader(InputStreamReader(resourceStream))

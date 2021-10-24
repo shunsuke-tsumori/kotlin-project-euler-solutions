@@ -7,20 +7,27 @@
  */
 
 
-package com.example.kotlinpesolutions.solver.q1_100
+package com.example.kotlinpesolutions.solver.p001_100
 
 import com.example.kotlinpesolutions.solver.PeSolver
 import org.springframework.stereotype.Component
 
 @Component
-class Q6Solver : PeSolver {
+class P002Solver : PeSolver {
+    var bound = 4_000_000
+
     override fun run() {
-        val max = 100
-        var sum = 0L
-        for (i in 1..max) {
-            for (j in i + 1..max) {
-                sum += 2 * i * j
+        var a = 1
+        var b = 2
+        var c = a + b
+        var sum = 2
+        while (c < bound) {
+            if (c % 2 == 0) {
+                sum += c
             }
+            a = b
+            b = c
+            c = a + b
         }
         println(sum)
     }

@@ -7,13 +7,13 @@
  */
 
 
-package com.example.kotlinpesolutions.solver.q1_100
+package com.example.kotlinpesolutions.solver.p001_100
 
 import com.example.kotlinpesolutions.solver.PeSolver
 import org.springframework.stereotype.Component
 
 @Component
-class Q3Solver : PeSolver {
+class P003Solver : PeSolver {
     override fun run() {
         var divider = 3L
         var target = 600851475143
