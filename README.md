@@ -3,5 +3,5 @@
 run 
 
 ```shell
-$ ./gradlew bootRun -Pargs=--problem=[problem number]
+./gradlew bootRun -Pargs=--spring.main.banner-mode=off,--problem=[problem number]
 ```
