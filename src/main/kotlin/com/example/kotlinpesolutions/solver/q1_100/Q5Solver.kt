@@ -9,17 +9,25 @@
 
 package com.example.kotlinpesolutions.solver.q1_100
 
+import com.example.kotlinpesolutions.library.NumericalCalculator
 import com.example.kotlinpesolutions.solver.PeSolver
 import org.springframework.stereotype.Component
 
 @Component
-class Q5Solver: PeSolver {
+class Q5Solver(
+    private val numericalCalculator: NumericalCalculator
+) : PeSolver {
     override fun run() {
         println(calculate())
     }
 
     fun calculate(): Long {
-        return 5L * 7 * 9 * 11 * 13 * 17 * 16 * 19
+        val max = 20L
+        var lcm = 1L
+        for (i in 2L..max) {
+            lcm = i * lcm / numericalCalculator.gcd(i, lcm)
+        }
+        return lcm
     }
 
 }
