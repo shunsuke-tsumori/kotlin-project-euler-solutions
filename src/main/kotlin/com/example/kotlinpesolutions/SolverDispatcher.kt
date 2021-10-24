@@ -23,6 +23,7 @@ class SolverDispatcher(
     @Value("\${problem}") val problem: Int
 ) {
     fun run() {
+        println("problem: $problem")
         when (problem) {
             1 -> q1Solver.run()
             2 -> q2Solver.run()

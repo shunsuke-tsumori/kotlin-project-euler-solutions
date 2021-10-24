@@ -30,6 +30,13 @@ tasks.withType<KotlinCompile> {
     }
 }
 
+tasks.bootRun {
+    mainClass.set("com.example.kotlinpesolutions.KotlinPeSolutionsApplicationKt")
+    if (project.hasProperty("args")) {
+        args = project.property("args").toString().split(",")
+    }
+}
+
 tasks.withType<Test> {
     useJUnitPlatform()
 }
