@@ -14,10 +14,10 @@ import com.example.kotlinpesolutions.solver.PeSolver
 import org.springframework.stereotype.Component
 
 @Component
-class P007Solver(
+class P010Solver(
     private val primeCalculator: PrimeCalculator
 ) : PeSolver {
     override fun run() {
-        println(primeCalculator.findNthPrime(10001))
+        println(primeCalculator.primeListBelow(2_000_000).reduce { prod, element -> prod + element })
     }
 }

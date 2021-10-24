@@ -7,8 +7,9 @@
  */
 
 
-package com.example.kotlinpesolutions.library
+package com.example.kotlinpesolutions.library.impl
 
+import com.example.kotlinpesolutions.library.NumericalCalculator
 import org.springframework.stereotype.Component
 
 @Component

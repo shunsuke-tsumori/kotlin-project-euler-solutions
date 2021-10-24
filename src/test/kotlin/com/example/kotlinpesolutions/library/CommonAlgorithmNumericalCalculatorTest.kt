@@ -1,5 +1,6 @@
 package com.example.kotlinpesolutions.library
 
+import com.example.kotlinpesolutions.library.impl.CommonAlgorithmNumericalCalculator
 import org.junit.jupiter.api.Assertions.*
 import org.junit.jupiter.api.Test
 import org.springframework.beans.factory.annotation.Autowired
