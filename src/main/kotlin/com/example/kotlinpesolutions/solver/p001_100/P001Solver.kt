@@ -18,7 +18,7 @@ import java.io.InputStreamReader
 @Component
 class P001Solver : PeSolver {
     override fun run() {
-        val resourceStream = ClassPathResource("params/q1.txt").inputStream
+        val resourceStream = ClassPathResource("params/p1.txt").inputStream
         val reader = BufferedReader(InputStreamReader(resourceStream))
         val max = reader.readLine().toInt()
         val (a, b) = reader.readLine().split(" ").map { it.toInt() }
