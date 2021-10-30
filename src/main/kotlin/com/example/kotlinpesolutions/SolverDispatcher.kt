@@ -30,6 +30,7 @@ class SolverDispatcher(
     private val p013Solver: P013Solver,
     private val p014Solver: P014Solver,
     private val p015Solver: P015Solver,
+    private val p016Solver: P016Solver,
     @Value("\${problem}") val problem: Int
 ) {
     fun run() {
@@ -50,6 +51,7 @@ class SolverDispatcher(
             13 -> p013Solver.run()
             14 -> p014Solver.run()
             15 -> p015Solver.run()
+            16 -> p016Solver.run()
             else -> println("not yet solved")
         }
     }
