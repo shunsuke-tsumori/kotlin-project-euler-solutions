@@ -22,7 +22,7 @@ class P014Solver : PeSolver {
         lengthMap[1] = 1
 
         for (i in 1..bound) {
-            val length = setCollatzLengthMapAndGetTheLength(lengthMap, i)
+            val length = collatzMemoAndGetLength(lengthMap, i)
             if (length > maxLength) {
                 maxLength = length
                 maxProducer = i
@@ -34,12 +34,12 @@ class P014Solver : PeSolver {
     }
 
     // assert lengthMap[1] = 1
-    private fun setCollatzLengthMapAndGetTheLength(lengthMap: MutableMap<Long, Int>, n: Long): Int {
+    private fun collatzMemoAndGetLength(lengthMap: MutableMap<Long, Int>, n: Long): Int {
         if (!lengthMap.containsKey(n)) {
             if (n % 2 == 0L) {
-                lengthMap[n] = 1 + setCollatzLengthMapAndGetTheLength(lengthMap, n / 2)
+                lengthMap[n] = 1 + collatzMemoAndGetLength(lengthMap, n / 2)
             } else {
-                lengthMap[n] = 1 + setCollatzLengthMapAndGetTheLength(lengthMap, n * 3 + 1)
+                lengthMap[n] = 1 + collatzMemoAndGetLength(lengthMap, n * 3 + 1)
             }
         }
         return lengthMap[n]!!
