@@ -9,13 +9,13 @@
 
 package com.example.kotlinpesolutions.solver.p001_100
 
-import com.example.kotlinpesolutions.library.StringCalculationProcessor
+import com.example.kotlinpesolutions.library.StringCalculator
 import com.example.kotlinpesolutions.solver.PeSolver
 import org.springframework.stereotype.Component
 
 @Component
 class P004Solver(
-    private val stringCalculationProcessor: StringCalculationProcessor
+    private val stringCalculator: StringCalculator
 ) : PeSolver {
     override fun run() {
         var max = 0
@@ -24,7 +24,7 @@ class P004Solver(
         for (i in 100 until 1000) {
             for (j in i until 1000) {
                 val prod = i * j
-                if (stringCalculationProcessor.isPalindrome(prod.toString()) && max < prod) {
+                if (stringCalculator.isPalindrome(prod.toString()) && max < prod) {
                     aI = i
                     aJ = j
                     max = prod

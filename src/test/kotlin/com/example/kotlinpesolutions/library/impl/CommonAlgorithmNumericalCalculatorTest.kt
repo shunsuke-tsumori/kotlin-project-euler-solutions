@@ -1,4 +1,4 @@
-package com.example.kotlinpesolutions.library
+package com.example.kotlinpesolutions.library.impl
 
 import com.example.kotlinpesolutions.library.impl.CommonAlgorithmNumericalCalculator
 import org.junit.jupiter.api.Assertions.*

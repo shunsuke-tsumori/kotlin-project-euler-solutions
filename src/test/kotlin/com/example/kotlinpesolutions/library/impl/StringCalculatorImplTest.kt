@@ -7,7 +7,7 @@
  */
 
 
-package com.example.kotlinpesolutions.library
+package com.example.kotlinpesolutions.library.impl
 
 import org.junit.jupiter.api.Test
 
@@ -17,37 +17,37 @@ import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.boot.test.context.SpringBootTest
 
 @SpringBootTest
-internal class StringCalculationProcessorTest(
-    @Autowired private val stringCalculationProcessor: StringCalculationProcessor
+internal class StringCalculatorImplTest(
+    @Autowired private val stringCalculatorImpl: StringCalculatorImpl
 ) {
 
     @Test
     @DisplayName("isPalindrome('101')")
     fun test_isPalindrome_t1() {
-        assertTrue(stringCalculationProcessor.isPalindrome("101"))
+        assertTrue(stringCalculatorImpl.isPalindrome("101"))
     }
 
     @Test
     @DisplayName("isPalindrome('1001')")
     fun test_isPalindrome_t2() {
-        assertTrue(stringCalculationProcessor.isPalindrome("1001"))
+        assertTrue(stringCalculatorImpl.isPalindrome("1001"))
     }
 
     @Test
     @DisplayName("isPalindrome('201')")
     fun test_isPalindrome_f1() {
-        assertFalse(stringCalculationProcessor.isPalindrome("201"))
+        assertFalse(stringCalculatorImpl.isPalindrome("201"))
     }
 
     @Test
     @DisplayName("isPalindrome('2001')")
     fun test_isPalindrome_f2() {
-        assertFalse(stringCalculationProcessor.isPalindrome("2001"))
+        assertFalse(stringCalculatorImpl.isPalindrome("2001"))
     }
 
     @Test
     @DisplayName("isPalindrome('1021')")
     fun test_isPalindrome_f3() {
-        assertFalse(stringCalculationProcessor.isPalindrome("1021"))
+        assertFalse(stringCalculatorImpl.isPalindrome("1021"))
     }
 }
