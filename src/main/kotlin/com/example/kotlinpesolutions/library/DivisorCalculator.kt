@@ -13,4 +13,5 @@ interface DivisorCalculator {
     fun divisorSet(n: Long): Set<Long>
     fun divisorNumber(n: Long): Int
     fun primeFactorization(n: Long): Map<Long, Int>
+    fun sumProperDivisors(n: Int): Int
 }

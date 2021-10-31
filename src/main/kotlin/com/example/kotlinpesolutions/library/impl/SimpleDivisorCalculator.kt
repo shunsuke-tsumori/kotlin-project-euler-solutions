@@ -59,6 +59,10 @@ class SimpleDivisorCalculator : DivisorCalculator {
         return factorialMap
     }
 
+    override fun sumProperDivisors(n: Int): Int {
+        return divisorSet(n.toLong()).sum().toInt() - n
+    }
+
     private fun calcIndex(n: Long, divisor: Long): Int {
         var nSub = n
         var i = 0
