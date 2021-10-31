@@ -14,7 +14,7 @@ import org.springframework.stereotype.Component
 
 @Component
 class P003Solver : PeSolver {
-    override fun run() {
+    override fun run(): Long {
         var divider = 3L
         var target = 600851475143
 
@@ -25,7 +25,6 @@ class P003Solver : PeSolver {
             }
             divider += 2
         }
-
-        println(target)
+        return target
     }
 }

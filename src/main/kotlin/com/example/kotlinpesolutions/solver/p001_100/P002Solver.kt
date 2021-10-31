@@ -16,7 +16,7 @@ import org.springframework.stereotype.Component
 class P002Solver : PeSolver {
     var bound = 4_000_000
 
-    override fun run() {
+    override fun run(): Int {
         var a = 1
         var b = 2
         var c = a + b
@@ -29,6 +29,6 @@ class P002Solver : PeSolver {
             b = c
             c = a + b
         }
-        println(sum)
+        return sum
     }
 }

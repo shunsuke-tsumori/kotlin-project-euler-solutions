@@ -17,7 +17,7 @@ import org.springframework.stereotype.Component
 class P010Solver(
     private val primeCalculator: PrimeCalculator
 ) : PeSolver {
-    override fun run() {
-        println(primeCalculator.primeListBelow(2_000_000).reduce { prod, element -> prod + element })
+    override fun run(): Long {
+        return primeCalculator.primeListBelow(2_000_000).reduce { prod, element -> prod + element }
     }
 }

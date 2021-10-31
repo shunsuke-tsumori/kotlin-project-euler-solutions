@@ -18,7 +18,7 @@ import java.math.BigInteger
 
 @Component
 class P013Solver : PeSolver {
-    override fun run() {
+    override fun run(): Long {
         var ans = BigInteger("0")
         val resourceStream = ClassPathResource("params/p13.txt").inputStream
         val reader = BufferedReader(InputStreamReader(resourceStream))
@@ -26,7 +26,7 @@ class P013Solver : PeSolver {
             ans = ans.add(line.toString().toBigInteger())
         }
         reader.close()
-        println(ans.toString().substring(0, 10))
+        return ans.toString().substring(0, 10).toLong()
     }
 
 }

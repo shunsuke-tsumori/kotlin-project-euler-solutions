@@ -17,7 +17,7 @@ import java.io.InputStreamReader
 
 @Component
 class P001Solver : PeSolver {
-    override fun run() {
+    override fun run(): Int {
         val resourceStream = ClassPathResource("params/p1.txt").inputStream
         val reader = BufferedReader(InputStreamReader(resourceStream))
         val max = reader.readLine().toInt()
@@ -28,7 +28,7 @@ class P001Solver : PeSolver {
                 sum += i
             }
         }
-        println(sum)
         reader.close()
+        return sum
     }
 }

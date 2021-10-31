@@ -17,8 +17,8 @@ import org.springframework.stereotype.Component
 class P005Solver(
     private val numericalCalculator: NumericalCalculator
 ) : PeSolver {
-    override fun run() {
-        println(calculate())
+    override fun run(): Long {
+        return calculate()
     }
 
     fun calculate(): Long {

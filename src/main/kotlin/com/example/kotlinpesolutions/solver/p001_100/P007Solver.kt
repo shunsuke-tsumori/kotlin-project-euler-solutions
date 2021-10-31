@@ -17,7 +17,7 @@ import org.springframework.stereotype.Component
 class P007Solver(
     private val primeCalculator: PrimeCalculator
 ) : PeSolver {
-    override fun run() {
-        println(primeCalculator.findNthPrime(10001))
+    override fun run(): Long {
+        return primeCalculator.findNthPrime(10001)
     }
 }

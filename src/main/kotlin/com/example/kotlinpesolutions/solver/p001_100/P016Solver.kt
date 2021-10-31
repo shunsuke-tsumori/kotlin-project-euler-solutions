@@ -15,11 +15,10 @@ import java.math.BigInteger
 
 @Component
 class P016Solver : PeSolver {
-    override fun run() {
-        val ans = BigInteger("2")
+    override fun run(): Int {
+        return BigInteger("2")
             .pow(1000)
             .toString()
             .map { d -> d.digitToInt() }.sum()
-        println(ans)
     }
 }

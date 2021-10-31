@@ -18,7 +18,7 @@ import java.util.stream.Collectors
 
 @Component
 class P011Solver : PeSolver {
-    override fun run() {
+    override fun run(): Long {
         val resourceStream = ClassPathResource("params/p11.txt").inputStream
         val reader = BufferedReader(InputStreamReader(resourceStream))
         val numberGrid = reader
@@ -83,7 +83,6 @@ class P011Solver : PeSolver {
                 }
             }
         }
-
-        println(maxProd)
+        return maxProd
     }
 }

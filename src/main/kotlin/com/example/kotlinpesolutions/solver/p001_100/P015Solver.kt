@@ -14,10 +14,8 @@ import org.springframework.stereotype.Component
 
 @Component
 class P015Solver : PeSolver {
-    override fun run() {
-
-
-        println(combinationMemoAndGetValue(mutableMapOf(), 40, 20))
+    override fun run(): Long {
+        return combinationMemoAndGetValue(mutableMapOf(), 40, 20)
     }
 
     // nCr

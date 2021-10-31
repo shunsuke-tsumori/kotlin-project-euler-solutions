@@ -17,7 +17,7 @@ import org.springframework.stereotype.Component
 class P012Solver(
     private val divisorCalculator: DivisorCalculator
 ) : PeSolver {
-    override fun run() {
+    override fun run(): Long {
         val bound = 500
         var triangle = 1L
         var diff = 1
@@ -25,6 +25,6 @@ class P012Solver(
             diff++
             triangle += diff
         }
-        println(triangle)
+        return triangle
     }
 }

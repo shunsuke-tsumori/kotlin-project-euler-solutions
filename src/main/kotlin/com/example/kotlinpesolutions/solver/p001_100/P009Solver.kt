@@ -14,18 +14,22 @@ import org.springframework.stereotype.Component
 
 @Component
 class P009Solver : PeSolver {
-    override fun run() {
+    override fun run(): Int {
+        return calculate()
+    }
+
+    fun calculate(): Int {
         val total = 1000
         for (a in 1..total / 3) {
             for (b in a + 1..total) {
                 val c = total - a - b
                 if (a * a + b * b == c * c) {
-                    println("a=$a, b=$b, c=$c")
-                    val prod = a * b * c
-                    println("product: $prod")
+//                    println("a=$a, b=$b, c=$c")
+                    return a * b * c
                 }
             }
         }
+        return -1
     }
 
 }

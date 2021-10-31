@@ -14,7 +14,7 @@ import org.springframework.stereotype.Component
 
 @Component
 class P006Solver : PeSolver {
-    override fun run() {
+    override fun run(): Long {
         val max = 100
         var sum = 0L
         //(Σ_i i)^2 - Σ_i (i^2) = 2 * Σ_i≠j (i*j)
@@ -23,6 +23,6 @@ class P006Solver : PeSolver {
                 sum += 2 * i * j
             }
         }
-        println(sum)
+        return sum
     }
 }

@@ -17,20 +17,21 @@ import org.springframework.stereotype.Component
 class P004Solver(
     private val stringCalculator: StringCalculator
 ) : PeSolver {
-    override fun run() {
+    override fun run(): Int {
         var max = 0
-        var aI = 0
-        var aJ = 0
+//        var aI = 0
+//        var aJ = 0
         for (i in 100 until 1000) {
             for (j in i until 1000) {
                 val prod = i * j
                 if (stringCalculator.isPalindrome(prod.toString()) && max < prod) {
-                    aI = i
-                    aJ = j
+//                    aI = i
+//                    aJ = j
                     max = prod
                 }
             }
         }
-        println("ans=$max, ($aI, $aJ)")
+//        println("ans=$max, ($aI, $aJ)")
+        return max
     }
 }

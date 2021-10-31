@@ -14,7 +14,7 @@ import org.springframework.stereotype.Component
 
 @Component
 class P014Solver : PeSolver {
-    override fun run() {
+    override fun run(): Long {
         val bound = 1_000_000L
         var maxLength = 1
         var maxProducer = 1L
@@ -30,7 +30,7 @@ class P014Solver : PeSolver {
         }
 
 //        println("producer:$maxProducer, length:$maxLength")
-        println(maxProducer)
+        return maxProducer
     }
 
     // assert lengthMap[1] = 1

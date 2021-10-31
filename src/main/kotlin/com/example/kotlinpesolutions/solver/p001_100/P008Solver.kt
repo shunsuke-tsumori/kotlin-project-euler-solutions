@@ -18,7 +18,7 @@ import java.util.stream.Collectors
 
 @Component
 class P008Solver : PeSolver {
-    override fun run() {
+    override fun run(): Long {
         val resourceStream = ClassPathResource("params/p8.txt").inputStream
         val reader = BufferedReader(InputStreamReader(resourceStream))
         val numList = reader
@@ -40,6 +40,6 @@ class P008Solver : PeSolver {
                 greatest = current
             }
         }
-        println(greatest)
+        return greatest
     }
 }
