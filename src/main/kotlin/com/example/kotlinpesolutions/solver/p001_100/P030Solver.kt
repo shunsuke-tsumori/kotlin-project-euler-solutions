@@ -16,6 +16,7 @@ import org.springframework.stereotype.Component
 class P030Solver : PeSolver {
     override fun run(): Int {
         var sum = 0
+        // a^5 + ... + f^5 <= 354294 = 6 * 9^5
         for (a in 0..3) {
             for (b in 0..9) {
                 for (c in 0..9) {
