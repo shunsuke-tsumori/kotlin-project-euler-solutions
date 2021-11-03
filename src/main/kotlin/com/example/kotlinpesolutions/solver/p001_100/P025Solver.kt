@@ -15,6 +15,7 @@ import java.math.BigInteger
 
 @Component
 class P025Solver : PeSolver {
+    // Fibonacci
     override fun run(): Long {
         var index = 3L
         var f1 = BigInteger("1")
