@@ -11,6 +11,8 @@ package com.example.kotlinpesolutions.library.impl
 
 import com.example.kotlinpesolutions.library.PrimeCalculator
 import org.springframework.stereotype.Component
+import kotlin.math.floor
+import kotlin.math.sqrt
 
 @Component
 class SimplePrimeCalculator : PrimeCalculator {
@@ -42,6 +44,24 @@ class SimplePrimeCalculator : PrimeCalculator {
             currentNum += 2
         }
         return primeList[n - 1]
+    }
+
+    override fun isPrime(n: Int): Boolean {
+        if (n < 2) {
+            return false
+        }
+        if (n == 2) {
+            return true
+        }
+        if (n % 2 == 0) {
+            return false
+        }
+        for (i in 3..floor(sqrt(n.toDouble())).toInt() step 2) {
+            if (n % i == 0) {
+                return false
+            }
+        }
+        return true
     }
 
 

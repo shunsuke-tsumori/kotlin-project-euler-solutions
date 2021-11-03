@@ -19,4 +19,6 @@ interface PrimeCalculator {
      * returns the n-th prime
      */
     fun findNthPrime(n: Int): Long
+
+    fun isPrime(n: Int): Boolean
 }
