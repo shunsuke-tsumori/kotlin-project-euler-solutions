@@ -46,6 +46,7 @@ fun main() {
         30,
         31,
         32,
+        33,
         67
     )
     val path =
@@ -56,7 +57,8 @@ fun main() {
 
 
 fun generate(list: List<Int>, path: String) {
-    var text = """/*
+    var text =
+"""/*
  * kotlin-pe-solutions
  * Copyright (c) 2021 shunsuke.tsumori
  *
@@ -76,21 +78,26 @@ class SolverDispatcher(
 """
 
     for (p in list) {
-        text += "    private val p%03dSolver: P%03dSolver,\n".format(p, p)
+        text +=
+"    private val p%03dSolver: P%03dSolver,\n".format(p, p)
     }
 
 
-    text += """    @Value("\${'$'}{problem}") val problem: Int
+    text +=
+"""    @Value("\${'$'}{problem}") val problem: Int
 ) {
     fun run() {
         println("problem: ${'$'}problem")
         when (problem) {
 """
+
     for (p in list) {
-        text += "            %d -> println(p%03dSolver.run())\n".format(p, p)
+        text +=
+"            %d -> println(p%03dSolver.run())\n".format(p, p)
     }
 
-    text += """            else -> println("not yet solved")
+    text +=
+"""            else -> println("not yet solved")
         }
     }
 }
