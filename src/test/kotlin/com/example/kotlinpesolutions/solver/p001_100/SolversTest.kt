@@ -14,6 +14,7 @@ import org.junit.jupiter.api.DisplayName
 import org.junit.jupiter.api.Test
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.boot.test.context.SpringBootTest
+import java.math.BigInteger
 
 @SpringBootTest
 internal class SolversTest(
@@ -44,6 +45,7 @@ internal class SolversTest(
     @Autowired private val p025Solver: P025Solver,
     @Autowired private val p026Solver: P026Solver,
     @Autowired private val p027Solver: P027Solver,
+    @Autowired private val p028Solver: P028Solver,
     @Autowired private val p067Solver: P067Solver,
 ) {
     @Test
@@ -206,6 +208,12 @@ internal class SolversTest(
     @DisplayName("-59231")
     fun p027() {
         assertEquals(-59231, p027Solver.run())
+    }
+
+    @Test
+    @DisplayName("669171001")
+    fun p028() {
+        assertEquals(BigInteger("669171001"), p028Solver.run())
     }
 
     @Test
