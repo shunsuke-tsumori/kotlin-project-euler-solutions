@@ -35,4 +35,9 @@ class StringCalculatorImpl : StringCalculator {
         }
         return true
     }
+
+    override fun alphabeticalValue(string: String): Int {
+        val baseByte = 'A'.code.toByte() - 1
+        return string.toByteArray().sumOf { c -> c - baseByte }
+    }
 }

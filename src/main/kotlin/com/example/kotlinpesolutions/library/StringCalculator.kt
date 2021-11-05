@@ -16,4 +16,9 @@ interface StringCalculator {
      * is [digitString] [n]-digit pandigital
      */
     fun isPandigital(digitString: String, n: Int): Boolean
+
+    /**
+     * ex) SKY is 19+11+25 = 55
+     */
+    fun alphabeticalValue(string: String): Int
 }

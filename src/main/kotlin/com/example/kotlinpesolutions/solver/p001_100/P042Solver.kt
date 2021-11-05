@@ -17,11 +17,11 @@ import java.io.BufferedReader
 import java.io.InputStreamReader
 
 @Component
-class P022Solver(
+class P042Solver(
     private val stringCalculator: StringCalculator
 ) : ProjectEulerSolver {
     override fun run(): String {
-        val resourceStream = ClassPathResource("params/p22.txt").inputStream
+        val resourceStream = ClassPathResource("params/p42.txt").inputStream
         val reader = BufferedReader(InputStreamReader(resourceStream))
         val line = reader.readLine()!!
         reader.close()
@@ -29,12 +29,22 @@ class P022Solver(
         val nameList = line
             .split(",")
             .map { n -> n.replace("\"", "") }
-            .sorted()
 
-        var sum = 0L
-        for ((idx, elem) in nameList.withIndex()) {
-            sum += (idx + 1) * stringCalculator.alphabeticalValue(elem)
+        // 最長 14 は既知とする
+        // 14 * 26 = 364
+
+        val triangles = mutableListOf<Int>()
+        for (i in 1..26) {
+            triangles.add(i * (i + 1) / 2)
         }
-        return sum.toString()
+        var count = 0
+
+        for (name in nameList) {
+            if (triangles.contains(stringCalculator.alphabeticalValue(name))) {
+                count++
+            }
+        }
+
+        return count.toString()
     }
 }
