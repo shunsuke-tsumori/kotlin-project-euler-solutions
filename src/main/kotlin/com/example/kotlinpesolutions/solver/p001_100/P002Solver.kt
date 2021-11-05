@@ -9,14 +9,14 @@
 
 package com.example.kotlinpesolutions.solver.p001_100
 
-import com.example.kotlinpesolutions.solver.PeSolver
+import com.example.kotlinpesolutions.solver.ProjectEulerSolver
 import org.springframework.stereotype.Component
 
 @Component
-class P002Solver : PeSolver {
+class P002Solver : ProjectEulerSolver {
     var bound = 4_000_000
 
-    override fun run(): Int {
+    override fun run(): String {
         var a = 1
         var b = 2
         var c = a + b
@@ -29,6 +29,6 @@ class P002Solver : PeSolver {
             b = c
             c = a + b
         }
-        return sum
+        return sum.toString()
     }
 }

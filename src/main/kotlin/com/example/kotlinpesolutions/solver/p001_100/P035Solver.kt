@@ -11,21 +11,21 @@ package com.example.kotlinpesolutions.solver.p001_100
 
 import com.example.kotlinpesolutions.library.ListCalculator
 import com.example.kotlinpesolutions.library.PrimeCalculator
-import com.example.kotlinpesolutions.solver.PeSolver
+import com.example.kotlinpesolutions.solver.ProjectEulerSolver
 import org.springframework.stereotype.Component
 
 @Component
 class P035Solver(
     private val primeCalculator: PrimeCalculator,
     private val listCalculator: ListCalculator
-) : PeSolver {
-    override fun run(): Int {
+) : ProjectEulerSolver {
+    override fun run(): String {
 
-        return 13 +
+        return (13 +
                 countNDigitsCircularPrimes(3) +
                 countNDigitsCircularPrimes(4) +
                 countNDigitsCircularPrimes(5) +
-                countNDigitsCircularPrimes(6)
+                countNDigitsCircularPrimes(6)).toString()
     }
 
     private fun countNDigitsCircularPrimes(n: Int): Int {

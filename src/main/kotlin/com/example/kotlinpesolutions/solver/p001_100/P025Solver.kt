@@ -9,14 +9,14 @@
 
 package com.example.kotlinpesolutions.solver.p001_100
 
-import com.example.kotlinpesolutions.solver.PeSolver
+import com.example.kotlinpesolutions.solver.ProjectEulerSolver
 import org.springframework.stereotype.Component
 import java.math.BigInteger
 
 @Component
-class P025Solver : PeSolver {
+class P025Solver : ProjectEulerSolver {
     // Fibonacci
-    override fun run(): Long {
+    override fun run(): String {
         var index = 3L
         var f1 = BigInteger("1")
         var f2 = BigInteger("1")
@@ -28,6 +28,6 @@ class P025Solver : PeSolver {
             f2 = f3
             f3 = f2 + f1
         }
-        return index
+        return index.toString()
     }
 }

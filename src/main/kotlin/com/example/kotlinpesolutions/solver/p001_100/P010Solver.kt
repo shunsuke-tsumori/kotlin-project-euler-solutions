@@ -10,14 +10,14 @@
 package com.example.kotlinpesolutions.solver.p001_100
 
 import com.example.kotlinpesolutions.library.PrimeCalculator
-import com.example.kotlinpesolutions.solver.PeSolver
+import com.example.kotlinpesolutions.solver.ProjectEulerSolver
 import org.springframework.stereotype.Component
 
 @Component
 class P010Solver(
     private val primeCalculator: PrimeCalculator
-) : PeSolver {
-    override fun run(): Long {
-        return primeCalculator.primeListBelow(2_000_000).reduce { prod, element -> prod + element }
+) : ProjectEulerSolver {
+    override fun run(): String {
+        return primeCalculator.primeListBelow(2_000_000).reduce { prod, element -> prod + element }.toString()
     }
 }

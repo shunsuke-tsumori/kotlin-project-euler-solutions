@@ -9,12 +9,11 @@
 
 package com.example.kotlinpesolutions.solver.p001_100
 
-import org.junit.jupiter.api.Assertions.*
+import org.junit.jupiter.api.Assertions.assertEquals
 import org.junit.jupiter.api.DisplayName
 import org.junit.jupiter.api.Test
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.boot.test.context.SpringBootTest
-import java.math.BigInteger
 
 @SpringBootTest
 internal class SolversTest(
@@ -59,222 +58,222 @@ internal class SolversTest(
     @Test
     @DisplayName("233168")
     fun p001() {
-        assertEquals(233168, p001Solver.run())
+        assertEquals("233168", p001Solver.run())
     }
 
     @Test
     @DisplayName("4613732")
     fun p002() {
-        assertEquals(4613732, p002Solver.run())
+        assertEquals("4613732", p002Solver.run())
     }
 
     @Test
     @DisplayName("6857")
     fun p003() {
-        assertEquals(6857, p003Solver.run())
+        assertEquals("6857", p003Solver.run())
     }
 
     @Test
     @DisplayName("906609")
     fun p004() {
-        assertEquals(906609, p004Solver.run())
+        assertEquals("906609", p004Solver.run())
     }
 
     @Test
     @DisplayName("232792560")
     fun p005() {
-        assertEquals(232792560, p005Solver.run())
+        assertEquals("232792560", p005Solver.run())
     }
 
     @Test
     @DisplayName("25164150")
     fun p006() {
-        assertEquals(25164150, p006Solver.run())
+        assertEquals("25164150", p006Solver.run())
     }
 
     @Test
     @DisplayName("104743")
     fun p007() {
-        assertEquals(104743, p007Solver.run())
+        assertEquals("104743", p007Solver.run())
     }
 
     @Test
     @DisplayName("23514624000")
     fun p008() {
-        assertEquals(23514624000, p008Solver.run())
+        assertEquals("23514624000", p008Solver.run())
     }
 
     @Test
     @DisplayName("31875000")
     fun p009() {
-        assertEquals(31875000, p009Solver.run())
+        assertEquals("31875000", p009Solver.run())
     }
 
     @Test
     @DisplayName("142913828922")
     fun p010() {
-        assertEquals(142913828922, p010Solver.run())
+        assertEquals("142913828922", p010Solver.run())
     }
 
     @Test
     @DisplayName("70600674")
     fun p011() {
-        assertEquals(70600674, p011Solver.run())
+        assertEquals("70600674", p011Solver.run())
     }
 
     @Test
     @DisplayName("76576500")
     fun p012() {
-        assertEquals(76576500, p012Solver.run())
+        assertEquals("76576500", p012Solver.run())
     }
 
     @Test
     @DisplayName("5537376230")
     fun p013() {
-        assertEquals(5537376230, p013Solver.run())
+        assertEquals("5537376230", p013Solver.run())
     }
 
     @Test
     @DisplayName("837799")
     fun p014() {
-        assertEquals(837799, p014Solver.run())
+        assertEquals("837799", p014Solver.run())
     }
 
     @Test
     @DisplayName("137846528820")
     fun p015() {
-        assertEquals(137846528820, p015Solver.run())
+        assertEquals("137846528820", p015Solver.run())
     }
 
     @Test
     @DisplayName("1366")
     fun p016() {
-        assertEquals(1366, p016Solver.run())
+        assertEquals("1366", p016Solver.run())
     }
 
     @Test
     @DisplayName("21124")
     fun p017() {
-        assertEquals(21124, p017Solver.run())
+        assertEquals("21124", p017Solver.run())
     }
 
     @Test
     @DisplayName("1074")
     fun p018() {
-        assertEquals(1074, p018Solver.run())
+        assertEquals("1074", p018Solver.run())
     }
 
     @Test
     @DisplayName("171")
     fun p019() {
-        assertEquals(171, p019Solver.run())
+        assertEquals("171", p019Solver.run())
     }
 
     @Test
     @DisplayName("648")
     fun p020() {
-        assertEquals(648, p020Solver.run())
+        assertEquals("648", p020Solver.run())
     }
 
     @Test
     @DisplayName("31626")
     fun p021() {
-        assertEquals(31626, p021Solver.run())
+        assertEquals("31626", p021Solver.run())
     }
 
     @Test
     @DisplayName("871198282")
     fun p022() {
-        assertEquals(871198282, p022Solver.run())
+        assertEquals("871198282", p022Solver.run())
     }
 
     @Test
     @DisplayName("4179871")
     fun p023() {
-        assertEquals(4179871, p023Solver.run())
+        assertEquals("4179871", p023Solver.run())
     }
 
     @Test
     @DisplayName("2783915460")
     fun p024() {
-        assertEquals(2783915460, p024Solver.run())
+        assertEquals("2783915460", p024Solver.run())
     }
 
     @Test
     @DisplayName("4782")
     fun p025() {
-        assertEquals(4782, p025Solver.run())
+        assertEquals("4782", p025Solver.run())
     }
 
     @Test
     @DisplayName("983")
     fun p026() {
-        assertEquals(983, p026Solver.run())
+        assertEquals("983", p026Solver.run())
     }
 
     @Test
     @DisplayName("-59231")
     fun p027() {
-        assertEquals(-59231, p027Solver.run())
+        assertEquals("-59231", p027Solver.run())
     }
 
     @Test
     @DisplayName("669171001")
     fun p028() {
-        assertEquals(BigInteger("669171001"), p028Solver.run())
+        assertEquals("669171001", p028Solver.run())
     }
 
     @Test
     @DisplayName("9183")
     fun p029() {
-        assertEquals(9183, p029Solver.run())
+        assertEquals("9183", p029Solver.run())
     }
 
     @Test
     @DisplayName("443839")
     fun p030() {
-        assertEquals(443839, p030Solver.run())
+        assertEquals("443839", p030Solver.run())
     }
 
     @Test
     @DisplayName("73682")
     fun p031() {
-        assertEquals(73682, p031Solver.run())
+        assertEquals("73682", p031Solver.run())
     }
 
     @Test
     @DisplayName("45228")
     fun p032() {
-        assertEquals(45228, p032Solver.run())
+        assertEquals("45228", p032Solver.run())
     }
 
     @Test
     @DisplayName("100")
     fun p033() {
-        assertEquals(100, p033Solver.run())
+        assertEquals("100", p033Solver.run())
     }
 
     @Test
     @DisplayName("40730")
     fun p034() {
-        assertEquals(40730, p034Solver.run())
+        assertEquals("40730", p034Solver.run())
     }
 
     @Test
     @DisplayName("55")
     fun p035() {
-        assertEquals(55, p035Solver.run())
+        assertEquals("55", p035Solver.run())
     }
 
     @Test
     @DisplayName("872187")
     fun p036() {
-        assertEquals(872187, p036Solver.run())
+        assertEquals("872187", p036Solver.run())
     }
 
     @Test
     @DisplayName("7273")
     fun p067() {
-        assertEquals(7273, p067Solver.run())
+        assertEquals("7273", p067Solver.run())
     }
 }

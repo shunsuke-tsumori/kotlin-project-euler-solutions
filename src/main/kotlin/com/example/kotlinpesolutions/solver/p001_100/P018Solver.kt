@@ -10,7 +10,7 @@
 package com.example.kotlinpesolutions.solver.p001_100
 
 import com.example.kotlinpesolutions.library.impl.MaximumPathCalculator
-import com.example.kotlinpesolutions.solver.PeSolver
+import com.example.kotlinpesolutions.solver.ProjectEulerSolver
 import org.springframework.core.io.ClassPathResource
 import org.springframework.stereotype.Component
 import java.io.BufferedReader
@@ -20,8 +20,8 @@ import java.util.stream.Collectors
 @Component
 class P018Solver(
     private val maximumPathCalculator: MaximumPathCalculator
-) : PeSolver {
-    override fun run(): Int {
+) : ProjectEulerSolver {
+    override fun run(): String {
         val resourceStream = ClassPathResource("params/p18.txt").inputStream
         val reader = BufferedReader(InputStreamReader(resourceStream))
 
@@ -31,6 +31,6 @@ class P018Solver(
             .collect(Collectors.toList())
         reader.close()
 
-        return maximumPathCalculator.maximumPathValue(numberGrid)
+        return maximumPathCalculator.maximumPathValue(numberGrid).toString()
     }
 }

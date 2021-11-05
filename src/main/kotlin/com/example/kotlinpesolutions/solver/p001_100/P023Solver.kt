@@ -10,14 +10,14 @@
 package com.example.kotlinpesolutions.solver.p001_100
 
 import com.example.kotlinpesolutions.library.DivisorCalculator
-import com.example.kotlinpesolutions.solver.PeSolver
+import com.example.kotlinpesolutions.solver.ProjectEulerSolver
 import org.springframework.stereotype.Component
 
 @Component
 class P023Solver(
     private val divisorCalculator: DivisorCalculator
-) : PeSolver {
-    override fun run(): Long {
+) : ProjectEulerSolver {
+    override fun run(): String {
         val bound = 28123
         val abundantList = mutableListOf<Long>()
         for (i in 2..bound) {
@@ -36,6 +36,6 @@ class P023Solver(
                 sumOfTwoSet.add(sum)
             }
         }
-        return bound * (bound + 1) / 2 - sumOfTwoSet.sum()
+        return (bound * (bound + 1) / 2 - sumOfTwoSet.sum()).toString()
     }
 }

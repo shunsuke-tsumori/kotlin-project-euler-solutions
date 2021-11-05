@@ -9,15 +9,15 @@
 
 package com.example.kotlinpesolutions.solver.p001_100
 
-import com.example.kotlinpesolutions.solver.PeSolver
+import com.example.kotlinpesolutions.solver.ProjectEulerSolver
 import org.springframework.core.io.ClassPathResource
 import org.springframework.stereotype.Component
 import java.io.BufferedReader
 import java.io.InputStreamReader
 
 @Component
-class P022Solver : PeSolver {
-    override fun run(): Long {
+class P022Solver : ProjectEulerSolver {
+    override fun run(): String {
         val resourceStream = ClassPathResource("params/p22.txt").inputStream
         val reader = BufferedReader(InputStreamReader(resourceStream))
         val line = reader.readLine()!!
@@ -32,7 +32,7 @@ class P022Solver : PeSolver {
         for ((idx, elem) in nameList.withIndex()) {
             sum += (idx + 1) * nameAlphabeticalValue(elem)
         }
-        return sum
+        return sum.toString()
     }
 
     fun nameAlphabeticalValue(name: String): Int {

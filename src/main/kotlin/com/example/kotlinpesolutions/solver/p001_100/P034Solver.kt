@@ -9,12 +9,12 @@
 
 package com.example.kotlinpesolutions.solver.p001_100
 
-import com.example.kotlinpesolutions.solver.PeSolver
+import com.example.kotlinpesolutions.solver.ProjectEulerSolver
 import org.springframework.stereotype.Component
 
 @Component
-class P034Solver : PeSolver {
-    override fun run(): Int {
+class P034Solver : ProjectEulerSolver {
+    override fun run(): String {
         var sum = 0
         // 9! * 7 = 2540160
         for (i in 3..2540160) {
@@ -23,7 +23,7 @@ class P034Solver : PeSolver {
                 sum += i
             }
         }
-        return sum
+        return sum.toString()
     }
 
     private fun factorialOfDigits(n: Int): Int {

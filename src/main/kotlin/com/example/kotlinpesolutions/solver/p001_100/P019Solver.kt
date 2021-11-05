@@ -9,14 +9,14 @@
 
 package com.example.kotlinpesolutions.solver.p001_100
 
-import com.example.kotlinpesolutions.solver.PeSolver
+import com.example.kotlinpesolutions.solver.ProjectEulerSolver
 import org.springframework.stereotype.Component
 import java.time.DayOfWeek
 import java.time.LocalDate
 
 @Component
-class P019Solver : PeSolver {
-    override fun run(): Int {
+class P019Solver : ProjectEulerSolver {
+    override fun run(): String {
         var sum = 0
         var current = LocalDate.of(1901, 1, 1)
         while (current < LocalDate.of(2001, 1, 1)) {
@@ -25,6 +25,6 @@ class P019Solver : PeSolver {
             }
             current = current.plusDays(1)
         }
-        return sum
+        return sum.toString()
     }
 }

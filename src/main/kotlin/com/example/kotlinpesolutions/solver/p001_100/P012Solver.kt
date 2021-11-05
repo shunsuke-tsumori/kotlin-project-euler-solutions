@@ -10,14 +10,14 @@
 package com.example.kotlinpesolutions.solver.p001_100
 
 import com.example.kotlinpesolutions.library.DivisorCalculator
-import com.example.kotlinpesolutions.solver.PeSolver
+import com.example.kotlinpesolutions.solver.ProjectEulerSolver
 import org.springframework.stereotype.Component
 
 @Component
 class P012Solver(
     private val divisorCalculator: DivisorCalculator
-) : PeSolver {
-    override fun run(): Long {
+) : ProjectEulerSolver {
+    override fun run(): String {
         val bound = 500
         var triangle = 1L
         var diff = 1
@@ -25,6 +25,6 @@ class P012Solver(
             diff++
             triangle += diff
         }
-        return triangle
+        return triangle.toString()
     }
 }

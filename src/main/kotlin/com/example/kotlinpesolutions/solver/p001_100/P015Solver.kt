@@ -9,13 +9,13 @@
 
 package com.example.kotlinpesolutions.solver.p001_100
 
-import com.example.kotlinpesolutions.solver.PeSolver
+import com.example.kotlinpesolutions.solver.ProjectEulerSolver
 import org.springframework.stereotype.Component
 
 @Component
-class P015Solver : PeSolver {
-    override fun run(): Long {
-        return combinationMemoAndGetValue(mutableMapOf(), 40, 20)
+class P015Solver : ProjectEulerSolver {
+    override fun run(): String {
+        return combinationMemoAndGetValue(mutableMapOf(), 40, 20).toString()
     }
 
     // nCr

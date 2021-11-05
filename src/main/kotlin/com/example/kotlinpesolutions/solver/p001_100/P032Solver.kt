@@ -10,14 +10,14 @@
 package com.example.kotlinpesolutions.solver.p001_100
 
 import com.example.kotlinpesolutions.library.ListCalculator
-import com.example.kotlinpesolutions.solver.PeSolver
+import com.example.kotlinpesolutions.solver.ProjectEulerSolver
 import org.springframework.stereotype.Component
 
 @Component
 class P032Solver(
     private val listCalculator: ListCalculator
-) : PeSolver {
-    override fun run(): Int {
+) : ProjectEulerSolver {
+    override fun run(): String {
         val productSet = mutableSetOf<Int>()
         val permutations = listCalculator.permutations(listOf(1, 2, 3, 4, 5, 6, 7, 8, 9))
         for (p in permutations) {
@@ -32,7 +32,7 @@ class P032Solver(
                 }
             }
         }
-        return productSet.sum()
+        return productSet.sum().toString()
     }
 
     private fun toNum(numList: List<Int>): Int {

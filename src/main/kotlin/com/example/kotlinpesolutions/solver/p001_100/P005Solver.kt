@@ -10,15 +10,15 @@
 package com.example.kotlinpesolutions.solver.p001_100
 
 import com.example.kotlinpesolutions.library.NumericalCalculator
-import com.example.kotlinpesolutions.solver.PeSolver
+import com.example.kotlinpesolutions.solver.ProjectEulerSolver
 import org.springframework.stereotype.Component
 
 @Component
 class P005Solver(
     private val numericalCalculator: NumericalCalculator
-) : PeSolver {
-    override fun run(): Long {
-        return calculate()
+) : ProjectEulerSolver {
+    override fun run(): String {
+        return calculate().toString()
     }
 
     fun calculate(): Long {

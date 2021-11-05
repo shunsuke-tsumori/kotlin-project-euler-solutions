@@ -9,12 +9,12 @@
 
 package com.example.kotlinpesolutions.solver.p001_100
 
-import com.example.kotlinpesolutions.solver.PeSolver
+import com.example.kotlinpesolutions.solver.ProjectEulerSolver
 import org.springframework.stereotype.Component
 
 @Component
-class P030Solver : PeSolver {
-    override fun run(): Int {
+class P030Solver : ProjectEulerSolver {
+    override fun run(): String {
         var sum = 0
         // a^5 + ... + f^5 <= 354294 = 6 * 9^5
         for (a in 0..3) {
@@ -34,7 +34,7 @@ class P030Solver : PeSolver {
                 }
             }
         }
-        return sum - 1
+        return (sum - 1).toString()
     }
 
     private fun f1(a: Int, b: Int, c: Int, d: Int, e: Int, f: Int): Int {

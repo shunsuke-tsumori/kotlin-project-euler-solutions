@@ -10,15 +10,15 @@
 package com.example.kotlinpesolutions.solver.p001_100
 
 import com.example.kotlinpesolutions.library.StringCalculator
-import com.example.kotlinpesolutions.solver.PeSolver
+import com.example.kotlinpesolutions.solver.ProjectEulerSolver
 import org.springframework.stereotype.Component
 import java.lang.StringBuilder
 
 @Component
 class P036Solver(
     private val stringCalculator: StringCalculator
-) : PeSolver {
-    override fun run(): Int {
+) : ProjectEulerSolver {
+    override fun run(): String {
         val bound = 1_000_000
         var sum = 0
         for (i in 1..bound) {
@@ -28,7 +28,7 @@ class P036Solver(
                 sum += i
             }
         }
-        return sum
+        return sum.toString()
     }
 
     private fun Int.toBinaryString(): String {

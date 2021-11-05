@@ -9,12 +9,12 @@
 
 package com.example.kotlinpesolutions.solver.p001_100
 
-import com.example.kotlinpesolutions.solver.PeSolver
+import com.example.kotlinpesolutions.solver.ProjectEulerSolver
 import org.springframework.stereotype.Component
 
 @Component
-class P014Solver : PeSolver {
-    override fun run(): Long {
+class P014Solver : ProjectEulerSolver {
+    override fun run(): String {
         val bound = 1_000_000L
         var maxLength = 1
         var maxProducer = 1L
@@ -29,8 +29,7 @@ class P014Solver : PeSolver {
             }
         }
 
-//        println("producer:$maxProducer, length:$maxLength")
-        return maxProducer
+        return maxProducer.toString()
     }
 
     // assert lengthMap[1] = 1

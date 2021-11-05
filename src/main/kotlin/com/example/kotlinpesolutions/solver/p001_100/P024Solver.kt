@@ -10,16 +10,16 @@
 package com.example.kotlinpesolutions.solver.p001_100
 
 import com.example.kotlinpesolutions.library.ListCalculator
-import com.example.kotlinpesolutions.solver.PeSolver
+import com.example.kotlinpesolutions.solver.ProjectEulerSolver
 import org.springframework.stereotype.Component
 
 @Component
 class P024Solver(
     private val listCalculator: ListCalculator
-) : PeSolver {
-    override fun run(): Long {
+) : ProjectEulerSolver {
+    override fun run(): String {
         val numList = listOf(0L, 1, 2, 3, 4, 5, 6, 7, 8, 9)
         val permutationsList = listCalculator.permutations(numList)
-        return permutationsList[1_000_000 - 1].reduce { sum, element -> sum * 10 + element }
+        return permutationsList[1_000_000 - 1].reduce { sum, element -> sum * 10 + element }.toString()
     }
 }

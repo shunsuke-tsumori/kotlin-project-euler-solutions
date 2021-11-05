@@ -9,12 +9,12 @@
 
 package com.example.kotlinpesolutions.solver.p001_100
 
-import com.example.kotlinpesolutions.solver.PeSolver
+import com.example.kotlinpesolutions.solver.ProjectEulerSolver
 import org.springframework.stereotype.Component
 
 @Component
-class P003Solver : PeSolver {
-    override fun run(): Long {
+class P003Solver : ProjectEulerSolver {
+    override fun run(): String {
         var divider = 3L
         var target = 600851475143
 
@@ -25,6 +25,6 @@ class P003Solver : PeSolver {
             }
             divider += 2
         }
-        return target
+        return target.toString()
     }
 }

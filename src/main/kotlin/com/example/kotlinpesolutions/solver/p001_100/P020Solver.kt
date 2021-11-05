@@ -9,18 +9,18 @@
 
 package com.example.kotlinpesolutions.solver.p001_100
 
-import com.example.kotlinpesolutions.solver.PeSolver
+import com.example.kotlinpesolutions.solver.ProjectEulerSolver
 import org.springframework.stereotype.Component
 import java.math.BigInteger
 
 @Component
-class P020Solver : PeSolver {
-    override fun run(): Int {
+class P020Solver : ProjectEulerSolver {
+    override fun run(): String {
         var factorial = BigInteger("1")
         for (i in 2..100) {
             factorial = factorial.times(i.toBigInteger())
         }
-        return factorial.toString().map { d -> d.digitToInt() }.sum()
+        return factorial.toString().map { d -> d.digitToInt() }.sum().toString()
     }
 }
 

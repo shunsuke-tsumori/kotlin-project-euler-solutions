@@ -9,16 +9,17 @@
 
 package com.example.kotlinpesolutions.solver.p001_100
 
-import com.example.kotlinpesolutions.solver.PeSolver
+import com.example.kotlinpesolutions.solver.ProjectEulerSolver
 import org.springframework.stereotype.Component
 import java.math.BigInteger
 
 @Component
-class P016Solver : PeSolver {
-    override fun run(): Int {
+class P016Solver : ProjectEulerSolver {
+    override fun run(): String {
         return BigInteger("2")
             .pow(1000)
             .toString()
-            .map { d -> d.digitToInt() }.sum()
+            .map { d -> d.digitToInt() }
+            .sum().toString()
     }
 }

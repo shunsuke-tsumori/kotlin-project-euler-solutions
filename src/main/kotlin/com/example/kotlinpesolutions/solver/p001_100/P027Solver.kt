@@ -10,14 +10,14 @@
 package com.example.kotlinpesolutions.solver.p001_100
 
 import com.example.kotlinpesolutions.library.PrimeCalculator
-import com.example.kotlinpesolutions.solver.PeSolver
+import com.example.kotlinpesolutions.solver.ProjectEulerSolver
 import org.springframework.stereotype.Component
 
 @Component
 class P027Solver(
     private val primeCalculator: PrimeCalculator
-) : PeSolver {
-    override fun run(): Int {
+) : ProjectEulerSolver {
+    override fun run(): String {
         var max = 0
         var theProduct = 0
 
@@ -38,6 +38,6 @@ class P027Solver(
                 }
             }
         }
-        return theProduct
+        return theProduct.toString()
     }
 }

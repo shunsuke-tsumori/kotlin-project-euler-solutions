@@ -9,12 +9,12 @@
 
 package com.example.kotlinpesolutions.solver.p001_100
 
-import com.example.kotlinpesolutions.solver.PeSolver
+import com.example.kotlinpesolutions.solver.ProjectEulerSolver
 import org.springframework.stereotype.Component
 
 @Component
-class P006Solver : PeSolver {
-    override fun run(): Long {
+class P006Solver : ProjectEulerSolver {
+    override fun run(): String {
         val max = 100
         var sum = 0L
         //(Σ_i i)^2 - Σ_i (i^2) = 2 * Σ_i≠j (i*j)
@@ -23,6 +23,6 @@ class P006Solver : PeSolver {
                 sum += 2 * i * j
             }
         }
-        return sum
+        return sum.toString()
     }
 }

@@ -9,13 +9,13 @@
 
 package com.example.kotlinpesolutions.solver.p001_100
 
-import com.example.kotlinpesolutions.solver.PeSolver
+import com.example.kotlinpesolutions.solver.ProjectEulerSolver
 import org.springframework.stereotype.Component
 
 @Component
-class P009Solver : PeSolver {
-    override fun run(): Int {
-        return calculate()
+class P009Solver : ProjectEulerSolver {
+    override fun run(): String {
+        return calculate().toString()
     }
 
     fun calculate(): Int {

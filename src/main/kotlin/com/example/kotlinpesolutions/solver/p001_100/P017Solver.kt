@@ -9,12 +9,12 @@
 
 package com.example.kotlinpesolutions.solver.p001_100
 
-import com.example.kotlinpesolutions.solver.PeSolver
+import com.example.kotlinpesolutions.solver.ProjectEulerSolver
 import org.springframework.stereotype.Component
 
 @Component
-class P017Solver : PeSolver {
-    override fun run(): Int {
+class P017Solver : ProjectEulerSolver {
+    override fun run(): String {
         val numNameMap = mutableMapOf<Int, String>()
         numNameMap[1] = "one"
         numNameMap[2] = "two"
@@ -69,6 +69,6 @@ class P017Solver : PeSolver {
                     + sumUnder100)
         }
 
-        return sumUnder1000 + numNameMap[1]!!.length + numNameMap[1000]!!.length
+        return (sumUnder1000 + numNameMap[1]!!.length + numNameMap[1000]!!.length).toString()
     }
 }

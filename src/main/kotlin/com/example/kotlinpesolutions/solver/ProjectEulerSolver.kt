@@ -9,6 +9,6 @@
 
 package com.example.kotlinpesolutions.solver
 
-interface PeSolver {
-    fun run(): Any
+interface ProjectEulerSolver {
+    fun run(): String
 }

@@ -10,14 +10,14 @@
 package com.example.kotlinpesolutions.solver.p001_100
 
 import com.example.kotlinpesolutions.library.DivisorCalculator
-import com.example.kotlinpesolutions.solver.PeSolver
+import com.example.kotlinpesolutions.solver.ProjectEulerSolver
 import org.springframework.stereotype.Component
 
 @Component
 class P021Solver(
     private val divisorCalculator: DivisorCalculator
-) : PeSolver {
-    override fun run(): Int {
+) : ProjectEulerSolver {
+    override fun run(): String {
         val max = 10000
         var sum = 0
         for (i in 2..max) {
@@ -30,6 +30,6 @@ class P021Solver(
                 }
             }
         }
-        return sum
+        return sum.toString()
     }
 }

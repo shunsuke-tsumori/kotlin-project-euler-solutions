@@ -10,7 +10,7 @@
 package com.example.kotlinpesolutions.solver.p001_100
 
 import com.example.kotlinpesolutions.library.NumericalCalculator
-import com.example.kotlinpesolutions.solver.PeSolver
+import com.example.kotlinpesolutions.solver.ProjectEulerSolver
 import org.springframework.stereotype.Component
 import java.math.BigDecimal
 import java.math.RoundingMode
@@ -18,8 +18,8 @@ import java.math.RoundingMode
 @Component
 class P033Solver(
     private val numericalCalculator: NumericalCalculator
-) : PeSolver {
-    override fun run(): Int {
+) : ProjectEulerSolver {
+    override fun run(): String {
         var numerator = 1
         var denomitor = 1
         for (i in 1..9) {
@@ -46,7 +46,7 @@ class P033Solver(
             }
         }
         val gcd = numericalCalculator.gcd(numerator.toLong(), denomitor.toLong())
-        return denomitor / gcd.toInt()
+        return (denomitor / gcd.toInt()).toString()
     }
 
     private fun isMatch(n: Int, d: Int, i: Int, j: Int): Boolean {
