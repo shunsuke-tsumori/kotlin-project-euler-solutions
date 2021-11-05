@@ -28,4 +28,18 @@ class ListCalculatorImpl : ListCalculator {
         }
         return permutationsList
     }
+
+    override fun <T> duplicateCombinations(list: List<T>, length: Int): List<List<T>> {
+        val combinations = mutableListOf<List<T>>()
+        list.forEach { currentElem ->
+            if (length == 1) {
+                combinations.add(listOf(currentElem))
+            } else {
+                duplicateCombinations(list, length - 1).forEach { nextInnerList ->
+                    combinations.add(listOf(currentElem).plus(nextInnerList))
+                }
+            }
+        }
+        return combinations
+    }
 }

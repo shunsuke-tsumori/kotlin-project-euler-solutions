@@ -9,93 +9,41 @@
 
 package com.example.kotlinpesolutions.solver.p001_100
 
+import com.example.kotlinpesolutions.library.ListCalculator
 import com.example.kotlinpesolutions.library.PrimeCalculator
 import com.example.kotlinpesolutions.solver.PeSolver
 import org.springframework.stereotype.Component
 
 @Component
 class P035Solver(
-    private val primeCalculator: PrimeCalculator
+    private val primeCalculator: PrimeCalculator,
+    private val listCalculator: ListCalculator
 ) : PeSolver {
-    // TODO うまく解く
-    override fun run(): Any {
-        return 13 + count3digitsCircularPrimes() + count4digitsCircularPrimes() +
-                count5digitsCircularPrimes() + count6digitsCircularPrimes()
+    override fun run(): Int {
+
+        return 13 +
+                countNDigitsCircularPrimes(3) +
+                countNDigitsCircularPrimes(4) +
+                countNDigitsCircularPrimes(5) +
+                countNDigitsCircularPrimes(6)
     }
 
-    private fun count3digitsCircularPrimes(): Int {
-        var sum = 0
+    private fun countNDigitsCircularPrimes(n: Int): Int {
+        if (n < 3) {
+            throw IllegalArgumentException("n >= 3 とします")
+        }
         val digitList = listOf(1, 3, 7, 9)
-        for (i in digitList) {
-            for (j in digitList) {
-                for (k in digitList) {
-                    if (isProduceCircularPrime(i, j, k)) {
-                        sum += 1
-                    }
-                }
+        val combinations = listCalculator.duplicateCombinations(digitList, n)
+        var sum = 0
+        combinations.forEach { c ->
+            if (isProduceCircularPrime(c)) {
+                sum += 1
             }
         }
         return sum
     }
 
-    private fun count4digitsCircularPrimes(): Int {
-        var sum = 0
-        val digitList = listOf(1, 3, 7, 9)
-        for (i in digitList) {
-            for (j in digitList) {
-                for (k in digitList) {
-                    for (l in digitList) {
-                        if (isProduceCircularPrime(i, j, k, l)) {
-                            sum += 1
-                        }
-                    }
-                }
-            }
-        }
-        return sum
-    }
-
-    private fun count5digitsCircularPrimes(): Int {
-        var sum = 0
-        val digitList = listOf(1, 3, 7, 9)
-        for (i in digitList) {
-            for (j in digitList) {
-                for (k in digitList) {
-                    for (l in digitList) {
-                        for (m in digitList) {
-                            if (isProduceCircularPrime(i, j, k, l, m)) {
-                                sum += 1
-                            }
-                        }
-                    }
-                }
-            }
-        }
-        return sum
-    }
-
-    private fun count6digitsCircularPrimes(): Int {
-        var sum = 0
-        val digitList = listOf(1, 3, 7, 9)
-        for (i in digitList) {
-            for (j in digitList) {
-                for (k in digitList) {
-                    for (l in digitList) {
-                        for (m in digitList) {
-                            for (n in digitList) {
-                                if (isProduceCircularPrime(i, j, k, l, m, n)) {
-                                    sum += 1
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-        }
-        return sum
-    }
-
-    private fun isProduceCircularPrime(vararg a: Int): Boolean {
+    private fun isProduceCircularPrime(a: List<Int>): Boolean {
         val aList = a.toList()
         for (i in a.indices) {
             val circularList = aList.subList(i, a.size) + aList.subList(0, i)
