@@ -9,11 +9,14 @@
 
 package com.example.kotlinpesolutions.solver.p001_100
 
+import com.example.kotlinpesolutions.library.StringCalculator
 import com.example.kotlinpesolutions.solver.ProjectEulerSolver
 import org.springframework.stereotype.Component
 
 @Component
-class P038Solver : ProjectEulerSolver {
+class P038Solver(
+    private val stringCalculator: StringCalculator
+) : ProjectEulerSolver {
     override fun run(): String {
         var max = 0L
 
@@ -28,7 +31,7 @@ class P038Solver : ProjectEulerSolver {
                 if (concatenatedProduct > 987654321) {
                     break
                 }
-                if (isPandigital(concatenatedProductString) && max < concatenatedProduct) {
+                if (stringCalculator.isPandigital(concatenatedProductString, 9) && max < concatenatedProduct) {
                     max = concatenatedProduct
                 }
                 n++
@@ -36,14 +39,5 @@ class P038Solver : ProjectEulerSolver {
         }
 
         return max.toString()
-    }
-
-    private fun isPandigital(digit: String): Boolean {
-        for (i in 1..9) {
-            if (!digit.contains(i.toString())) {
-                return false
-            }
-        }
-        return true
     }
 }
