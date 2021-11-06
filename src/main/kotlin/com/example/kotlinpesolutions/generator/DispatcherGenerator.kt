@@ -66,6 +66,7 @@ fun main() {
         50,
         67,
         92,
+        97,
     )
     val path =
         Paths.get("").toAbsolutePath().toString() + "/src/main/kotlin/com/example/kotlinpesolutions/SolverDispatcher.kt"
