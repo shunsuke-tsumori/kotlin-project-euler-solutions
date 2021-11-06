@@ -72,6 +72,7 @@ private fun answers(): Map<Int, String> {
     answers[47] = "134043"
     answers[48] = "9110846700"
     answers[49] = "296962999629"
+    answers[50] = "997651"
     answers[67] = "7273"
     return answers
 }
