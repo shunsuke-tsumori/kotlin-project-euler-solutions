@@ -69,6 +69,7 @@ class SolverDispatcher(
     private val p053Solver: P053Solver,
     private val p055Solver: P055Solver,
     private val p056Solver: P056Solver,
+    private val p063Solver: P063Solver,
     private val p067Solver: P067Solver,
     private val p081Solver: P081Solver,
     private val p092Solver: P092Solver,
@@ -132,6 +133,7 @@ class SolverDispatcher(
             53 -> println(p053Solver.run())
             55 -> println(p055Solver.run())
             56 -> println(p056Solver.run())
+            63 -> println(p063Solver.run())
             67 -> println(p067Solver.run())
             81 -> println(p081Solver.run())
             92 -> println(p092Solver.run())
