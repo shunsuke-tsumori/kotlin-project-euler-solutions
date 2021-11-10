@@ -9,11 +9,14 @@
 
 package com.example.kotlinpesolutions.library.impl
 
+import com.example.kotlinpesolutions.library.DivisorCalculator
 import com.example.kotlinpesolutions.library.NumericalCalculator
 import org.springframework.stereotype.Component
 
 @Component
-class CommonAlgorithmNumericalCalculator : NumericalCalculator {
+class CommonAlgorithmNumericalCalculator(
+    private val divisorCalculator: DivisorCalculator
+) : NumericalCalculator {
     override fun gcd(a: Long, b: Long): Long {
         return euclideanAlgorithm(a, b)
     }
@@ -21,6 +24,15 @@ class CommonAlgorithmNumericalCalculator : NumericalCalculator {
     override fun gcd(a: Int, b: Int): Int {
         // TODO パフォーマンス改善
         return euclideanAlgorithm(a.toLong(), b.toLong()).toInt()
+    }
+
+    override fun totient(n: Int): Int {
+        var phi = n
+        val factors = divisorCalculator.primeFactorization(n.toLong()).keys.map { f -> f.toInt() }
+        for (factor in factors) {
+            phi = phi / factor * (factor - 1)
+        }
+        return phi
     }
 
     private fun euclideanAlgorithm(a: Long, b: Long): Long {

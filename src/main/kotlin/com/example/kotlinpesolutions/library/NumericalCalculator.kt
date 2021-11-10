@@ -15,4 +15,5 @@ interface NumericalCalculator {
      */
     fun gcd(a: Long, b: Long): Long
     fun gcd(a: Int, b: Int): Int
+    fun totient(n: Int): Int
 }
