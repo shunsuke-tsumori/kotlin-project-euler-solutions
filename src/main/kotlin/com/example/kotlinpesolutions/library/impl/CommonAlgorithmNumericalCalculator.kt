@@ -18,6 +18,11 @@ class CommonAlgorithmNumericalCalculator : NumericalCalculator {
         return euclideanAlgorithm(a, b)
     }
 
+    override fun gcd(a: Int, b: Int): Int {
+        // TODO パフォーマンス改善
+        return euclideanAlgorithm(a.toLong(), b.toLong()).toInt()
+    }
+
     private fun euclideanAlgorithm(a: Long, b: Long): Long {
         var a1 = a
         var a2 = b

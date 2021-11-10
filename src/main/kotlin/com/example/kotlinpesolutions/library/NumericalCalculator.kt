@@ -14,4 +14,5 @@ interface NumericalCalculator {
      * greatest common divisor
      */
     fun gcd(a: Long, b: Long): Long
+    fun gcd(a: Int, b: Int): Int
 }
