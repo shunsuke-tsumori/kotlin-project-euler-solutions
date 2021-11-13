@@ -22,7 +22,6 @@ class CommonAlgorithmNumericalCalculator(
     }
 
     override fun gcd(a: Int, b: Int): Int {
-        // TODO パフォーマンス改善
         return euclideanAlgorithm(a.toLong(), b.toLong()).toInt()
     }
 
