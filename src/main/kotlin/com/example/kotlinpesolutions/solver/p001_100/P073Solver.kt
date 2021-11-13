@@ -20,7 +20,7 @@ class P073Solver(
     override fun run(): String {
         val v1over3 = 1.0 / 3
         val v1over2 = 1.0 / 2
-        val fractionSet = mutableSetOf<Pair<Int, Int>>() // setは遅いようだ
+        val fractionSet = mutableSetOf<Pair<Int, Int>>()
         for (d in 2..12_000) {
             var n = d / 3
             var vNOverD = n.toDouble() / d
