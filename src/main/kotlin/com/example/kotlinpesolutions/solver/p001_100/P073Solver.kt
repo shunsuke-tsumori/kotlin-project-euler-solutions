@@ -20,7 +20,7 @@ class P073Solver(
     override fun run(): String {
         val v1over3 = 1.0 / 3
         val v1over2 = 1.0 / 2
-        val fractionSet = mutableSetOf<Pair<Int, Int>>()
+        val fractionSet = sortedSetOf<Fraction>()
         for (d in 2..12_000) {
             var n = d / 3
             var vNOverD = n.toDouble() / d
@@ -29,12 +29,30 @@ class P073Solver(
                     val gcd = numericalCalculator.gcd(n, d)
                     val reducedN = n / gcd
                     val reducedD = d / gcd
-                    fractionSet.add(Pair(reducedN, reducedD))
+                    fractionSet.add(Fraction(reducedN, reducedD))
                 }
                 n++
                 vNOverD = n.toDouble() / d
             }
         }
         return fractionSet.size.toString()
+    }
+
+    private data class Fraction(
+        val numerator: Int,
+        val denominator: Int
+    ) : Comparable<Fraction> {
+        override fun compareTo(other: Fraction): Int {
+            val thisValue = this.numerator.toDouble() / this.denominator
+            val otherValue = other.numerator.toDouble() / other.denominator
+            return if (thisValue > otherValue) {
+                1
+            } else if (thisValue == otherValue) {
+                0
+            } else {
+                -1
+            }
+        }
+
     }
 }
