@@ -13,7 +13,7 @@ import java.io.File
 import java.nio.file.Paths
 
 fun main() {
-    val solved = listOf(
+    val solved = sortedSetOf(
         1,
         2,
         3,
@@ -77,6 +77,7 @@ fun main() {
         69,
         71,
         73,
+        76,
         79,
         81,
         92,
@@ -90,7 +91,7 @@ fun main() {
 }
 
 
-fun generate(list: List<Int>, path: String) {
+fun generate(list: Set<Int>, path: String) {
     var text =
 """/*
  * kotlin-pe-solutions
