@@ -21,4 +21,6 @@ interface StringCalculator {
      * ex) SKY is 19+11+25 = 55
      */
     fun alphabeticalValue(string: String): Int
+
+    fun isPermutation(string1: String, string2: String): Boolean
 }

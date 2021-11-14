@@ -40,4 +40,18 @@ class StringCalculatorImpl : StringCalculator {
         val baseByte = 'A'.code.toByte() - 1
         return string.toByteArray().sumOf { c -> c - baseByte }
     }
+
+    override fun isPermutation(string1: String, string2: String): Boolean {
+        if (string1.length != string2.length) {
+            return false
+        }
+        val sorted1 = string1.map { it }.sortedBy { it }
+        val sorted2 = string2.map { it }.sortedBy { it }
+        for (i in sorted1.indices) {
+            if (sorted1[i] != sorted2[i]) {
+                return false
+            }
+        }
+        return true
+    }
 }
