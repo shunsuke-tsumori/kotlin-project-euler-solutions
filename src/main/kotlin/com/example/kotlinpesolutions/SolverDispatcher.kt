@@ -88,6 +88,7 @@ class SolverDispatcher(
     private val p079Solver: P079Solver,
     private val p080Solver: P080Solver,
     private val p081Solver: P081Solver,
+    private val p082Solver: P082Solver,
     private val p085Solver: P085Solver,
     private val p087Solver: P087Solver,
     private val p092Solver: P092Solver,
@@ -171,6 +172,7 @@ class SolverDispatcher(
             79 -> println(p079Solver.run())
             80 -> println(p080Solver.run())
             81 -> println(p081Solver.run())
+            82 -> println(p082Solver.run())
             85 -> println(p085Solver.run())
             87 -> println(p087Solver.run())
             92 -> println(p092Solver.run())
