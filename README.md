@@ -1,4 +1,4 @@
-# kotlin-pe-solutions
+# kotlin-project-euler-solutions
 
 Here are sample solutions to problems 1 through 100 of Project Euler in Kotlin.
 
