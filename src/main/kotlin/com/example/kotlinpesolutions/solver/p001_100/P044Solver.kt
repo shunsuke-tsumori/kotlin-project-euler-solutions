@@ -9,31 +9,31 @@
 
 package com.example.kotlinpesolutions.solver.p001_100
 
-import com.example.kotlinpesolutions.library.PentagonalCalculator
+import com.example.kotlinpesolutions.library.PolygonCalculator
 import com.example.kotlinpesolutions.solver.ProjectEulerSolver
 import org.springframework.stereotype.Component
 
 @Component
 class P044Solver(
-    private val pentagonalCalculator: PentagonalCalculator
+    private val polygonCalculator: PolygonCalculator
 ) : ProjectEulerSolver {
     override fun run(): String {
         var minDistance = Long.MAX_VALUE
         var i = 2
         while (true) {
-            val pI = pentagonalCalculator.pentagonal(i)
+            val pI = polygonCalculator.pentagonal(i)
             // pI - p(I-1) > mimDistance
             if (3 * i - 2 > minDistance) {
                 break
             }
             for (j in i - 1 downTo 1) {
-                val pJ = pentagonalCalculator.pentagonal(j)
+                val pJ = polygonCalculator.pentagonal(j)
                 val distance = pI - pJ
                 if (distance > minDistance) {
                     break
                 }
-                if (pentagonalCalculator.isPentagonal(distance)
-                    && pentagonalCalculator.isPentagonal(pI + pJ)
+                if (polygonCalculator.isPentagonal(distance)
+                    && polygonCalculator.isPentagonal(pI + pJ)
                 ) {
                     if (distance < minDistance) {
                         minDistance = distance

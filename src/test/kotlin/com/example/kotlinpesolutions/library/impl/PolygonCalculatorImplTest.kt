@@ -15,13 +15,20 @@ import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.boot.test.context.SpringBootTest
 
 @SpringBootTest
-internal class TrianglePentagonalHexagonalCalculatorTest(
-    @Autowired private val target: TrianglePentagonalHexagonalCalculator
+internal class PolygonCalculatorImplTest(
+    @Autowired private val target: PolygonCalculatorImpl
 ) {
     @Test
     fun test_isTriangle() {
         for (i in 1..1000) {
             assertTrue(target.isTriangle(target.triangle(i)))
+        }
+    }
+
+    @Test
+    fun test_isSquare() {
+        for (i in 1..1000) {
+            assertTrue(target.isSquare(target.square(i)))
         }
     }
 
@@ -36,6 +43,20 @@ internal class TrianglePentagonalHexagonalCalculatorTest(
     fun test_isHexagonal() {
         for (i in 1..1000) {
             assertTrue(target.isHexagonal(target.hexagonal(i)))
+        }
+    }
+
+    @Test
+    fun test_isHeptagonal() {
+        for (i in 1..1000) {
+            assertTrue(target.isHeptagonal(target.heptagonal(i)))
+        }
+    }
+
+    @Test
+    fun test_isOctagonal() {
+        for (i in 1..1000) {
+            assertTrue(target.isOctagonal(target.octagonal(i)))
         }
     }
 }
