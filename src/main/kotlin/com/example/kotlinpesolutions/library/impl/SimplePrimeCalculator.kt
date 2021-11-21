@@ -47,17 +47,21 @@ class SimplePrimeCalculator : PrimeCalculator {
     }
 
     override fun isPrime(n: Int): Boolean {
+        return isPrime(n.toLong())
+    }
+
+    override fun isPrime(n: Long): Boolean {
         if (n < 2) {
             return false
         }
-        if (n == 2) {
+        if (n == 2L) {
             return true
         }
-        if (n % 2 == 0) {
+        if (n % 2 == 0L) {
             return false
         }
         for (i in 3..floor(sqrt(n.toDouble())).toInt() step 2) {
-            if (n % i == 0) {
+            if (n % i == 0L) {
                 return false
             }
         }

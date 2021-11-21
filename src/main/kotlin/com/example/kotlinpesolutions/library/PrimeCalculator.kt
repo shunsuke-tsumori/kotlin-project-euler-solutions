@@ -21,4 +21,5 @@ interface PrimeCalculator {
     fun findNthPrime(n: Int): Long
 
     fun isPrime(n: Int): Boolean
+    fun isPrime(n: Long): Boolean
 }
