@@ -31,7 +31,7 @@ class P065Solver : ProjectEulerSolver {
         return numerator.toString().map { it.digitToInt() }.sum().toString()
     }
 
-    fun continuedFractionNumber(n: Int): Int {
+    private fun continuedFractionNumber(n: Int): Int {
         if (n % 3 == 2) {
             return 2 * (n + 1) / 3
         }
