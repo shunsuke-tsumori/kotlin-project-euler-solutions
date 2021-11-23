@@ -25,9 +25,6 @@ class P100Solver : ProjectEulerSolver {
     //TODO refactor
     private fun calculateY(): BigInteger {
         val a0 = BigInteger.ONE
-        if (a0 * a0 == BigInteger.TWO) {
-            return BigInteger.ZERO
-        }
         @Suppress
         var a = a0
         var m = BigInteger.ZERO
