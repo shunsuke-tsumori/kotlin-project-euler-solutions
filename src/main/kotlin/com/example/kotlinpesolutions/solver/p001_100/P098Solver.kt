@@ -74,21 +74,22 @@ class P098Solver(
             return max
         }
     }
+
+    private fun isSquare(n: Int): Boolean {
+        val sqrt = floor(sqrt(n.toDouble())).toInt()
+        return sqrt * sqrt == n
+    }
+
+    private fun readWords(): List<String> {
+        val resourceStream = ClassPathResource("params/p98.txt").inputStream
+        val reader = BufferedReader(InputStreamReader(resourceStream))
+        val line = reader.readLine()!!
+        reader.close()
+
+        return line
+            .split(",")
+            .map { n -> n.replace("\"", "") }
+    }
 }
 
-private fun isSquare(n: Int): Boolean {
-    val sqrt = floor(sqrt(n.toDouble())).toInt()
-    return sqrt * sqrt == n
-}
-
-private fun readWords(): List<String> {
-    val resourceStream = ClassPathResource("params/p98.txt").inputStream
-    val reader = BufferedReader(InputStreamReader(resourceStream))
-    val line = reader.readLine()!!
-    reader.close()
-
-    return line
-        .split(",")
-        .map { n -> n.replace("\"", "") }
-}
 
