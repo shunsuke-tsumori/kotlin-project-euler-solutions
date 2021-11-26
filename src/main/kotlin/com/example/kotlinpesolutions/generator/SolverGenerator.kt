@@ -13,7 +13,7 @@ import java.io.File
 import java.nio.file.Paths
 
 fun main() {
-    val p = 90
+    val p = 93
     val path =
         Paths.get("").toAbsolutePath()
             .toString() + "/src/main/kotlin/com/example/kotlinpesolutions/solver/p001_100/P%03dSolver.kt".format(p)
