@@ -100,6 +100,7 @@ internal class SolversTest(
     @Autowired private val p081Solver: P081Solver,
     @Autowired private val p082Solver: P082Solver,
     @Autowired private val p083Solver: P083Solver,
+    @Autowired private val p084Solver: P084Solver,
     @Autowired private val p085Solver: P085Solver,
     @Autowired private val p086Solver: P086Solver,
     @Autowired private val p087Solver: P087Solver,
@@ -612,6 +613,12 @@ internal class SolversTest(
     @DisplayName("425185")
     fun p083() {
         assertEquals("425185", p083Solver.run())
+    }
+
+    @Test
+    @DisplayName("101524")
+    fun p084() {
+        assertEquals("101524", p084Solver.run())
     }
 
     @Test
