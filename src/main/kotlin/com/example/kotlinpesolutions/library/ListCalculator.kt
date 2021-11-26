@@ -12,4 +12,5 @@ package com.example.kotlinpesolutions.library
 interface ListCalculator {
     fun <T> permutations(list: List<T>): List<List<T>>
     fun <T> duplicateCombinations(list: List<T>, length: Int): List<List<T>>
+    fun <T> combinations(memberList: List<T>, n: Int): List<List<T>>
 }

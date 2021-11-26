@@ -45,4 +45,25 @@ class ListCalculatorImpl : ListCalculator {
         }
         return combinations
     }
+
+    override fun <T> combinations(memberList: List<T>, n: Int): List<List<T>> {
+        if (n > memberList.size || 1 > n || memberList.isEmpty()) {
+            throw IllegalArgumentException("illegal arg")
+        }
+        return calculateCombinations(memberList, n, 0)
+    }
+
+    private fun <T> calculateCombinations(memberList: List<T>, length: Int, currentIdx: Int): List<List<T>> {
+        val combinations = mutableListOf<List<T>>()
+        for (i in currentIdx..memberList.size - length) {
+            if (length == 1) {
+                combinations.add(listOf(memberList[i]))
+            } else {
+                calculateCombinations(memberList, length - 1, i + 1).forEach { nextList ->
+                    combinations.add(listOf(memberList[i]).plus(nextList))
+                }
+            }
+        }
+        return combinations
+    }
 }
